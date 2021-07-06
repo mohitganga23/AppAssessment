@@ -34,7 +34,7 @@ public class MyAccessibilityService extends AccessibilityService {
             CharSequence applicationLabel = packageManager.getApplicationLabel(applicationInfo);
 
             if (!(applicationLabel.equals("TouchWiz home") ||
-                    applicationLabel.equals("System UI") || applicationLabel.equals("AppAssessment"))) {
+                    applicationLabel.equals("System UI") || applicationLabel.equals("AssessmentApp"))) {
                 if (eventType == AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED) {
                     saveTextValue(nodeInfo, applicationLabel, packageName, currentTime);
                 }
