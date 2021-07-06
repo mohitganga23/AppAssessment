@@ -2,6 +2,7 @@ package com.example.appassessment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -77,9 +78,13 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().popBackStack();
         } else if (!doubleBackToExitPressedOnce) {
             this.doubleBackToExitPressedOnce = true;
+
             Snackbar snackbar = Snackbar
-                    .make(relativeLayout, "Tap again to exit", Snackbar.LENGTH_LONG);
+                    .make(relativeLayout, "Tap back again to exit", Snackbar.LENGTH_LONG);
+            View sbView = snackbar.getView();
+            sbView.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.red));
             snackbar.show();
+
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
