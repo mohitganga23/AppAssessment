@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">AppAssessment</string>
-    <string name="accessibility_service_label">New Accessibility Service Label</string>
-    <string name="accessibility_service_description">Accessibility Service Description</string>
+    <string name="app_name">AssessmentApp</string>
+    <string name="accessibility_service_label">AppAssessment Accessibility Service</string>
+    <string name="accessibility_service_description">This app wants to retrieve thw window content that user is interacting with</string>
     <string name="app_label">Application Label</string>
     <string name="logs">Logs</string>
     <string name="time">time</string>
